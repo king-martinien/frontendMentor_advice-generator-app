@@ -1,0 +1,209 @@
+:root {
+  --clr-dark-blue: hsl(218, 23%, 16%);
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+  --clr-grayish-blue: hsl(217, 19%, 38%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+  --quote-size: 28px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Manrope;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-light-cyan);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+strong {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--clr-neon-green);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.skeleton {
+  border-radius: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#131820), color-stop(50%, #131820), color-stop(80%, #131820)), #1b222d;
+  background: linear-gradient(to right, #131820, #131820 50%, #131820 80%), #1b222d;
+  background-repeat: repeat-y;
+  background-size: 90px 500px;
+  background-position: 0 0;
+  -webkit-animation: shine 1s infinite;
+          animation: shine 1s infinite;
+}
+
+.skeleton.id {
+  background-size: 10px 15%;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.title {
+  text-align: center;
+  -webkit-text-stroke-color: var(--clr-neon-green);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.quote {
+  position: relative;
+  padding: 25px 20px 50px;
+  background-color: var(--clr-dark-grayish-blue);
+  width: 92%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.quote strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2px;
+}
+
+.quote strong span {
+  display: block;
+  min-height: 7px;
+  min-width: 30px;
+}
+
+.quote__text {
+  display: block;
+  margin-bottom: 20px;
+  min-height: 100px;
+  border-radius: 4px;
+  max-width: 280px;
+  padding: 6px 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-color: #1b222d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.quote__text p {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.4s ease, opacity 0.4s ease, -webkit-transform 0.2s ease;
+  transition: visibility 0.4s ease, opacity 0.4s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, visibility 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.2s ease, visibility 0.4s ease, opacity 0.4s ease, -webkit-transform 0.2s ease;
+}
+
+.quote__text p::before {
+  content: "\201C";
+}
+
+.quote__text p::after {
+  content: "\201D";
+}
+
+.quote__text p.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.quote__divider img {
+  display: block;
+  width: 100%;
+}
+
+.quote__dice {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: var(--clr-neon-green);
+  padding: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.quote__dice:hover {
+  background-color: #61ffb0;
+  -webkit-box-shadow: 0 0px 20px #61ffb0;
+          box-shadow: 0 0px 20px #61ffb0;
+}
+
+.quote__dice img {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote__text {
+    font-size: 22px;
+    line-height: 28px;
+    max-width: 380px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

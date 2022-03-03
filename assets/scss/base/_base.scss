@@ -1,0 +1,45 @@
+:root {
+  --clr-dark-blue: hsl(218, 23%, 16%);
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+  --clr-grayish-blue: hsl(217, 19%, 38%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+  --quote-size: 28px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Manrope;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-light-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+strong {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--clr-neon-green);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
