@@ -4,7 +4,34 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+}
+
+.attribution {
   margin-bottom: 25px;
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  svg {
+    fill: var(--clr-neon-green);
+    width: 16px;
+    height: 16px;
+  }
+
+  a {
+    color: var(--clr-neon-green);
+    text-decoration: none;
+
+    &.author {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3px;
+    }
+  }
 }
 
 .quote {
@@ -87,11 +114,26 @@
     &:hover {
       background-color: hsl(150, 100%, 69%);
       box-shadow: 0 0px 20px hsl(150, 100%, 69%);
+
+      // img {
+      //   transform: rotate(270deg);
+      // }
     }
 
     img {
       width: 22px;
       height: 22px;
+      // animation: anim 0.5s 1;
+
+      @keyframes anim {
+        from {
+          transform: rotate(270deg);
+        }
+
+        to {
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 
